@@ -1,0 +1,28 @@
+.Toggle {
+  display: flex;
+  max-width: 100rem;
+  flex-direction: row;
+  padding: 1rem;
+  background-color: #18191d;
+  border-radius: 0.25rem;
+  & > .Toggle__label {
+    flex-grow: 1;
+  }
+  & > .Switch {
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+}
+
+.Toggle__group {
+  background-color: #282d30;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  & > .Toggle {
+    border-radius: 0.5rem;
+    margin-bottom: 0.25rem;
+    &:last-child {
+      margin-bottom: 0rem;
+    }
+  }
+}

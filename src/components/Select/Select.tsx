@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import "./Select.scss";
 
 export interface SelectProps {
   value?: string;
@@ -14,6 +15,7 @@ export const Select: FC<SelectProps> = ({
   disabled,
 }) => (
   <select
+    className="Select"
     value={value}
     disabled={disabled}
     onChange={({ target: { value } }) => onChange && onChange(value)}

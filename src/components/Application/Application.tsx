@@ -8,6 +8,7 @@ import {
   GroupToggleType,
   NumberToggle,
 } from "../Toggle";
+import "./Application.scss";
 
 interface UsersValues extends GroupToggleType {
   add: boolean;
@@ -121,7 +122,7 @@ export const Application: FC<unknown> = () => {
   return (
     <div className="Application">
       <Group label="General">
-        <div>
+        <div className="Application--grid">
           <BooleanToggle
             label="Case Management"
             value={caseManagement}
@@ -180,58 +181,63 @@ export const Application: FC<unknown> = () => {
           />
         </div>
       </Group>
-      <Group label="Settings">
-        <BooleanToggle
-          label="Audit Log"
-          value={auditLog}
-          onChange={(value) =>
-            setState(
-              produce((draft) => {
-                draft.settings.auditLog = value;
-              })
-            )
-          }
-        />
-        <GroupToggle<UsersValues>
-          label="Users"
-          value={users}
-          onChange={(value) =>
-            setState(
-              produce((draft) => {
-                draft.settings.users = value;
-              })
-            )
-          }
-          render={usersRenderer}
-        />
-      </Group>
-      <Group label="Alerts">
-        <BooleanToggle
-          label="Alert Manager"
-          value={alertManager}
-          onChange={(value) =>
-            setState(
-              produce((draft) => {
-                draft.alerts.alertManager = value;
-              })
-            )
-          }
-        />
-        <NumberToggle
-          value={alertRules}
-          label="Alert Rules"
-          onChange={(value) =>
-            setState(
-              produce((draft) => {
-                draft.alerts.alertRules = value;
-              })
-            )
-          }
-          options={Array(10)
-            .fill(null)
-            .map((_, index) => index)}
-        />
-      </Group>
+      <div className="Application--grid">
+        <Group label="Settings">
+          <div className="Toggle__group">
+            <BooleanToggle
+              label="Audit Log"
+              value={auditLog}
+              onChange={(value) =>
+                setState(
+                  produce((draft) => {
+                    draft.settings.auditLog = value;
+                  })
+                )
+              }
+            />
+            <GroupToggle<UsersValues>
+              label="Users"
+              value={users}
+              onChange={(value) =>
+                setState(
+                  produce((draft) => {
+                    draft.settings.users = value;
+                  })
+                )
+              }
+              render={usersRenderer}
+            />
+          </div>
+        </Group>
+
+        <Group label="Alerts">
+          <BooleanToggle
+            label="Alert Manager"
+            value={alertManager}
+            onChange={(value) =>
+              setState(
+                produce((draft) => {
+                  draft.alerts.alertManager = value;
+                })
+              )
+            }
+          />
+          <NumberToggle
+            value={alertRules}
+            label="Alert Rules"
+            onChange={(value) =>
+              setState(
+                produce((draft) => {
+                  draft.alerts.alertRules = value;
+                })
+              )
+            }
+            options={Array(10)
+              .fill(null)
+              .map((_, index) => index)}
+          />
+        </Group>
+      </div>
     </div>
   );
 };

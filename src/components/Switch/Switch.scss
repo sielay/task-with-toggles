@@ -1,0 +1,35 @@
+.Switch {
+  display: block;
+  & > input {
+    position: absolute;
+    top: -1000px;
+  }
+  border-radius: 1rem;
+  height: 1.25rem;
+  width: 2.5rem;
+  border: 1px solid #ccc;
+  background: #aaa;
+  cursor: pointer;
+  &--checked {
+    background: linear-gradient(
+      rgba(255, 255, 255, 1) 0%,
+      rgba(105, 163, 221, 1) 2%,
+      rgba(105, 163, 221, 1) 33%,
+      rgba(98, 124, 229, 1) 43%,
+      rgba(98, 124, 229, 1) 66%
+    );
+  }
+
+  & > span {
+    border: 1px solid #ccc;
+    background-color: #ddd;
+    display: block;
+    border-radius: 100px;
+    height: 1.1rem;
+    width: 1.1rem;
+    transition: margin-left .1s ease-in;
+  }
+  & > input:checked + span {
+    margin-left: 1.2rem;
+  }
+}
