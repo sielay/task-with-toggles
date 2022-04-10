@@ -31,3 +31,15 @@ response should not be hardcoded into the UI
 - Phase 2 - setting styles
 - Phase 3 - test
 - Phase 4 - storybook
+
+## TEST
+
+```
+nvm use 16
+npx yarn
+npx yarn start
+// or
+npx yarn test
+// or
+npx yarn storybook
+```
