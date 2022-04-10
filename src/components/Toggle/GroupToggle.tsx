@@ -1,6 +1,7 @@
 import React from "react";
 import { Switch } from "../Switch";
 import { GroupToggleType, ToggleProps } from "./types";
+import "./Toggle.scss";
 
 export function GroupToggle<ValueType extends GroupToggleType>({
   value,

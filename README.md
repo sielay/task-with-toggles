@@ -28,5 +28,6 @@ response should not be hardcoded into the UI
   - reading and reviewing the requirements
 
 - Phase 1 - setting the components
-- Phase 2 - setting styles and storybook
-- Phase 3 - compose the app
+- Phase 2 - setting styles
+- Phase 3 - test
+- Phase 4 - storybook

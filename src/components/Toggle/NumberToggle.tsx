@@ -2,6 +2,7 @@ import React, { FC } from "react";
 import { Select } from "../Select";
 import { Switch } from "../Switch";
 import { ToggleProps } from "./types";
+import "./Toggle.scss";
 
 export const NumberToggle: FC<ToggleProps<number>> = ({
   value,

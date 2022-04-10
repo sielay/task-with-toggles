@@ -9,9 +9,15 @@ export interface SwitchProps {
 }
 
 export const Switch: FC<SwitchProps> = ({ value, disabled, onChange }) => (
-  <label className={cx("Switch", value && "Switch--checked")} tabIndex={0}>
+  <label
+    className={cx("Switch", value && "Switch--checked")}
+    tabIndex={0}
+    role="checkbox"
+    aria-checked={!!value}
+  >
     <input
       type="checkbox"
+      role="none"
       checked={value}
       disabled={disabled}
       onChange={({ target: { checked } }) => onChange && onChange(checked)}

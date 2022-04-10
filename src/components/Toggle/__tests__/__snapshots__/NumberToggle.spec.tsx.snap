@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components.Toggle.NumberToggle Renders as expected 1`] = `
+<body>
+  <div>
+    <div
+      class="Toggle"
+    >
+      <div
+        class="Toggle__label"
+      >
+        ABC
+      </div>
+      <select
+        class="Select"
+      >
+        <option
+          value="1"
+        >
+          1
+        </option>
+        <option
+          value="2"
+        >
+          2
+        </option>
+        <option
+          value="3"
+        >
+          3
+        </option>
+      </select>
+      <label
+        aria-checked="true"
+        class="Switch Switch--checked"
+        role="checkbox"
+        tabindex="0"
+      >
+        <input
+          checked=""
+          role="none"
+          type="checkbox"
+        />
+        <span />
+      </label>
+    </div>
+  </div>
+</body>
+`;
